@@ -19,19 +19,23 @@ def index(request):
         "quickstartDocUrl": config["quickstart"]["doc"]["url"],
         "quickstartRepoName": config["quickstart"]["repo"]["name"],
         "quickstartRepoUrl": config["quickstart"]["repo"]["url"],
-        "appUrl": config["app"]["url"] % os.environ,
-        "envUrl": config["env"]["url"] % os.environ,
+        "appUrl": config["app"]["url"],
+        # "appUrl": config["app"]["url"] % os.environ,
+        "envUrl": config["env"]["url"],
+        # "envUrl": config["env"]["url"] % os.environ,
         "nextStep": config["next"]["step"]["show"],
         "nextStepPackageUrl": config["next"]["step"]["package"]["url"],
         "consoleUrl": config["webplus"]["console"]["url"],
         "envs": {
-            "appRegionId": os.environ["WP_APP_REGION_ID"],
-            "appId": os.environ["WP_APP_ID"],
-            "appName": os.environ["WP_APP_NAME"],
-            "envId": os.environ["WP_ENV_ID"],
-            "envName": os.environ["WP_ENV_NAME"],
-            "fromCLI": "CLI" == os.environ["WP_CHANGE_TRIGGER_FROM"],
-            "fromConsole": 'Console' == os.environ["WP_CHANGE_TRIGGER_FROM"]
+            # "appRegionId": os.environ["WP_APP_REGION_ID"],
+            # "appId": os.environ["WP_APP_ID"],
+            "appName": 'Talk',
+            # "appName": os.environ["WP_APP_NAME"],
+            # "envId": os.environ["WP_ENV_ID"],
+            # "envName": os.environ["WP_ENV_NAME"],
+            "envName": 'Talk_env',
+            # "fromCLI": "CLI" == os.environ["WP_CHANGE_TRIGGER_FROM"],
+            # "fromConsole": 'Console' == os.environ["WP_CHANGE_TRIGGER_FROM"]
         }
     }
 
